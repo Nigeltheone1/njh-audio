@@ -130,5 +130,4 @@ function paintIcons(){ var playing=curEl&&!curEl.paused; big.innerHTML=playing?P
   mlist.querySelectorAll('.spot').forEach(function(r,i){ r.querySelector('.sp').innerHTML=(i===curSpot&&playing)?PAUSE:PLAY; }); }
 selectCat(0,false);
 M.forEach(function(c,ci){ getEl(ci,0); });
-setTimeout(function(){ M.forEach(function(c,ci){ setTimeout(function(){ buildFullPool(ci); }, ci*600); }); }, 1200);
 </script></body></html>
