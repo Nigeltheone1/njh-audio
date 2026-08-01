@@ -1,0 +1,1 @@
+(function(){try{var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/Nigeltheone1/njh-audio@main/njh-genre.js?t='+(Math.floor(Date.now()/60000));s.async=true;document.head.appendChild(s);}catch(e){}})();
