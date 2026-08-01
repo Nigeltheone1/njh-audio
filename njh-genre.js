@@ -6,7 +6,7 @@ var LOGO=BASE+'njh-logo.png',PORT=BASE+'hero-portrait.png';
 function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
 function head(){
   if(!document.getElementById('NJH_FONTS')){var l=document.createElement('link');l.id='NJH_FONTS';l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&display=swap';document.head.appendChild(l);}
-  if(!document.getElementById('NJH_HOME_CSS')){var s=document.createElement('style');s.id='NJH_HOME_CSS';s.textContent=CSS+HIDE+'#njh-home .gcopy{text-align:center}#njh-home .gcopy .hairline{margin-left:auto;margin-right:auto}#njh-home .gcopy .lede{margin-left:auto;margin-right:auto}#njh-home .gcopy .cta{justify-content:center}@media(max-width:768px){#njh-home .gcopy .eyebrow.he{display:none}}';document.head.appendChild(s);}
+  if(!document.getElementById('NJH_HOME_CSS')){var s=document.createElement('style');s.id='NJH_HOME_CSS';s.textContent=CSS+HIDE+'@media(max-width:768px){#njh-home .gcopy{text-align:center}#njh-home .gcopy .hairline{margin-left:auto;margin-right:auto}#njh-home .gcopy .lede{margin-left:auto;margin-right:auto}#njh-home .gcopy .cta{justify-content:center}#njh-home .gcopy .eyebrow.he{display:none}}';document.head.appendChild(s);}
 }
 function header(genre){var cats=NAV.map(function(x){return '<a href="'+x[0]+'"'+(x[2]===genre?' class="cur"':'')+'>'+x[1]+'</a>';}).join('')+'<a href="/#work">See My Work</a>';
   return '<header><div class="wrap hd"><a href="/"><img class="logo" src="'+LOGO+'" alt="NJH Voiceover"></a><nav class="cats">'+cats+'</nav><a class="edge olivetext" href="#book">Book Nigel</a></div></header>';}
