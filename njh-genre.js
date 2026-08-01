@@ -30,6 +30,7 @@ function fixW(n){n.style.width='';n.style.marginLeft='';n.style.marginTop='';var
 function matchHeights(){var g=document.querySelector('#njh-home .gcopy');var p=document.querySelector('#njh-home .gplayer .plist');var phd=document.querySelector('#njh-home .gplayer .phd');if(!g||!p||!phd)return;if(window.innerWidth<=900){p.style.maxHeight='';return;}var gh=g.getBoundingClientRect().height;var ph=phd.getBoundingClientRect().height;p.style.maxHeight=Math.max(200,Math.round(gh-ph))+'px';}
 function forceGreenNow(){[].slice.call(document.querySelectorAll('#njh-home a.olivetext')).forEach(function(a){if(a.style.color!=='rgb(124, 138, 82)')a.style.setProperty('color','#7c8a52','important');});[].slice.call(document.querySelectorAll('#njh-home .cnote,#njh-home .copy')).forEach(function(a){if(a.style.color)a.style.removeProperty('color');});}
 function bleed(){var n=document.getElementById('njh-home');if(!n||!n.getAttribute('data-genre'))return;
+  if(/voiceactor\.com/.test(location.host))return;
   var body=document.body;
   if(body.firstElementChild!==n){body.insertBefore(n,body.firstChild);}
   [].slice.call(body.children).forEach(function(el){if(el!==n&&el.tagName!=='SCRIPT'&&el.tagName!=='STYLE'&&el.tagName!=='LINK'){el.style.display='none';}});
