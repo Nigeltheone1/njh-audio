@@ -9,7 +9,7 @@ function head(){
   if(!document.getElementById('NJH_HOME_CSS')){var s=document.createElement('style');s.id='NJH_HOME_CSS';s.textContent=CSS+HIDE;document.head.appendChild(s);}
 }
 function header(genre){var cats=NAV.map(function(x){return '<a href="'+x[0]+'"'+(x[2]===genre?' class="cur"':'')+'>'+x[1]+'</a>';}).join('')+'<a href="/#work">See My Work</a>';
-  return '<header><div class="wrap hd"><a href="/"><img class="logo" src="'+LOGO+'" alt="NJH Voiceover"></a><a class="edge" href="/">Home</a><nav class="cats">'+cats+'</nav><a class="edge olivetext" href="#book">Book Nigel</a></div></header>';}
+  return '<header><div class="wrap hd"><a href="/"><img class="logo" src="'+LOGO+'" alt="NJH Voiceover"></a><nav class="cats">'+cats+'</nav><a class="edge olivetext" href="#book">Book Nigel</a></div></header>';}
 function heroCopy(genre){var H=HERO[genre];var st=STUDIO[genre]?'<div class="studio"><span class="sk">In Production</span><span class="sv">'+STUDIO[genre]+'</span></div>':'';
   return '<div class="gcopy"><div class="eyebrow he">'+H.eyebrow+' &middot; Voice Actor</div><div class="hairline"></div><h1>'+H.h1+'</h1><p class="lede">'+H.lede+'</p><div class="cta"><a class="olivetext" href="#book">Book Nigel &rarr;</a></div>'+st+'</div>';}
 function playerPanel(genre){return '<div class="gplayer" id="demos"><div class="panel"><div class="phd"><span class="ln" id="lnName"></span><span class="cnt" id="lnCnt"></span></div><div class="plist" id="plist"></div></div></div>';}
