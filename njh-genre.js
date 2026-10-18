@@ -61,8 +61,8 @@ commercial:[
 {k:'vi',id:'1199923869',b:'SAIF',t:'Made for Oregon :15, broadcast TV'},
 {k:'ym',id:'22F0v5tnMbU',b:'Kashi',t:'Kashi Loves Quitters',tall:1},
 {k:'vm',src:NJHV+'video-amex-korea-dreams.mp4',b:'American Express',t:'High Yield Savings: Korea Dreams :15',tall:1},
-{k:'ym',id:'D4Xvo4u6SQY',b:'Adobe Acrobat',t:'Rosco: Water Cooler Confidential',tall:1},
-{k:'ym',id:'iYG4xgLr5mk',b:'Adobe Acrobat',t:'Rosco: My Very First Bunker',tall:1}],
+{k:'ym',id:'iYG4xgLr5mk',b:'Adobe Acrobat',t:'Rosco: My Very First Bunker',tall:1},
+{k:'ym',id:'D4Xvo4u6SQY',b:'Adobe Acrobat',t:'Rosco: Water Cooler Confidential',tall:1}],
 narration:[
 {k:'yt',id:'JaPl-KvAeoo',b:'Stepping Stone of San Diego',t:'50th Anniversary: Before and After'}]};
 function vidsSection(genre){var L=VIDS[genre];if(!L||!L.length)return'';function card(v){var fr;if(v.k==='vm')fr='<video controls preload="metadata" playsinline'+(v.poster?' poster="'+v.poster+'"':'')+' src="'+v.src+'"></video>';else if(v.k==='vi')fr='<iframe src="https://player.vimeo.com/video/'+v.id+'" title="'+esc(v.b+' '+v.t)+'" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>';else fr='<iframe src="https://www.youtube-nocookie.com/embed/'+v.id+'" title="'+esc(v.b+' '+v.t)+'" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>';return'<div class="vc"><div class="fr'+(v.tall?' tall':'')+'">'+fr+'</div><div class="cap"><b>'+esc(v.b)+'</b>'+esc(v.t)+'</div></div>';}
