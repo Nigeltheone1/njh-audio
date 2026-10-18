@@ -58,6 +58,7 @@ var NJHV='https://nigeltheone1.github.io/njh-audio/';var VIDS={
 commercial:[
 {k:'vm',src:NJHV+'video-granger-route.mp4',b:'Granger Waste Services',t:'The Route :30'},
 {k:'vi',id:'1193409911',b:'SAIF',t:'Made for Oregon :30, broadcast TV'},
+{k:'vm',src:NJHV+'video-solo-solvers.mp4',b:'Relatable',t:'Solo Solvers :30'},
 {k:'ym',id:'22F0v5tnMbU',b:'Kashi',t:'Kashi Loves Quitters',tall:1},
 {k:'vm',src:NJHV+'video-amex-korea-dreams.mp4',b:'American Express',t:'High Yield Savings: Korea Dreams :15',tall:1},
 {k:'vm',src:NJHV+'video-amex-growth.mp4',b:'American Express',t:'High Yield Savings: Growth :10',tall:1}],
