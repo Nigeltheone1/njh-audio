@@ -12,15 +12,7 @@ function head(){
 var NAVG=[[["/commercial","Commercial","commercial"],["/tech-voice-over","Tech &amp; AI","tech"]],[["/animation","Animation","animation"],["/video-games","Video Games","video-games"]],[["/narration","Narration","narration"],["/medical-voice-over","Medical &amp; Pharma","medical"]],[["/singing","Singing","singing"],["/#work","See My Work","work"]]];var STACKCSS="#njh-home .cats.njh-stack,#njh-topnav nav.njh-stack{align-items:center}#njh-home .cats.njh-stack .nc,#njh-topnav nav.njh-stack .nc{display:flex;flex-direction:column;justify-content:center;gap:5px;padding:0 22px;position:relative}#njh-home .cats.njh-stack .nc:not(:last-child)::after,#njh-topnav nav.njh-stack .nc:not(:last-child)::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:30px;background:#2a281c}#njh-home .cats.njh-stack .nc a,#njh-topnav nav.njh-stack .nc a{padding:0!important;margin:0!important;line-height:1.2;display:block}#njh-home .cats.njh-stack .nc a::after,#njh-topnav nav.njh-stack .nc a::after{display:none!important;content:none!important}#njh-home .cats.njh-stack a.cur{color:#e0721f}@media(max-width:860px){#njh-home .cats.njh-stack .nc,#njh-topnav nav.njh-stack .nc{padding:0 16px 0 0;gap:6px;flex:0 0 auto}#njh-home .cats.njh-stack .nc:not(:last-child)::after,#njh-topnav nav.njh-stack .nc:not(:last-child)::after{right:8px;height:26px}#njh-home .cats.njh-stack .nc:not(:first-child),#njh-topnav nav.njh-stack .nc:not(:first-child){padding-left:0}}";function stackLinks(cur){return NAVG.map(function(c){return '<span class="nc">'+c.map(function(x){return '<a href="'+x[0]+'"'+(x[2]===cur?' class="cur"':'')+'>'+x[1]+'</a>';}).join('')+'</span>';}).join('');}function stackCss(){if(!document.getElementById('NJH_STACK_CSS')){var st=document.createElement('style');st.id='NJH_STACK_CSS';st.textContent=STACKCSS;document.head.appendChild(st);}}
 function header(genre){stackCss();var cats=stackLinks(genre);
   return '<header><div class="wrap hd"><a href="/"><img class="logo" src="'+LOGO+'" alt="NJH Voiceover"'+LOGOERR+'></a><nav class="cats njh-stack">'+cats+'</nav><a class="edge olivetext" href="#book">Book Nigel</a></div></header>';}
-var REL={commercial:[
-{k:'vm',src:NJHV+'video-solo-solvers.mp4',poster:NJHV+'poster-solo-solvers.jpg',b:'Relatable',t:'Solo Solvers :30'},
-{k:'vm',src:NJHV+'video-granger-route.mp4',b:'Granger Waste Services',t:'The Route :30'},
-{k:'vi',id:'1199923869',b:'SAIF',t:'Made for Oregon :15, broadcast TV'},
-{k:'ym',id:'22F0v5tnMbU',b:'Kashi',t:'Kashi Loves Quitters',tall:1},
-{k:'vm',src:NJHV+'video-amex-korea-dreams.mp4',b:'American Express',t:'High Yield Savings: Korea Dreams :15',tall:1},
-{k:'ym',id:'D4Xvo4u6SQY',b:'Adobe Acrobat',t:'Rosco: Water Cooler Confidential',tall:1},
-{k:'ym',id:'iYG4xgLr5mk',b:'Adobe Acrobat',t:'Rosco: My Very First Bunker',tall:1}],
-narration:[['/medical-voice-over','Medical narration']]};function relLinks(g){var r=REL[g];if(!r)return '';return '<div class="njhrel" style="margin-top:18px;font-size:13px;letter-spacing:.06em;color:#a89f88">Also: '+r.map(function(x){return '<a href="'+x[0]+'" style="color:#c9bda3;text-decoration:underline;text-underline-offset:3px;margin-right:14px">'+x[1]+'</a>';}).join('')+'</div>';}
+var REL={commercial:[['/tech-voice-over','Tech &amp; AI voice over'],['/medical-voice-over','Medical &amp; pharma']],animation:[['/black-male-voice-actor','Black male voice actor for animation']],'video-games':[['/black-male-voice-actor','Black male voice actor for games']],narration:[['/medical-voice-over','Medical narration']]};function relLinks(g){var r=REL[g];if(!r)return '';return '<div class="njhrel" style="margin-top:18px;font-size:13px;letter-spacing:.06em;color:#a89f88">Also: '+r.map(function(x){return '<a href="'+x[0]+'" style="color:#c9bda3;text-decoration:underline;text-underline-offset:3px;margin-right:14px">'+x[1]+'</a>';}).join('')+'</div>';}
 function heroCopy(genre){var H=HERO[genre];var st=STUDIO[genre]?'<div class="studio"><span class="sk">In Production</span><span class="sv">'+STUDIO[genre]+'</span></div>':'';
   return '<div class="gcopy"><div class="eyebrow he">'+H.eyebrow+' &middot; Voice Actor</div><div class="hairline"></div><h1>'+H.h1+'</h1><p class="lede">'+H.lede+'</p><div class="cta"><a class="olivetext" href="#book">Book Nigel &rarr;</a></div>'+relLinks(genre)+st+'</div>';}
 function playerPanel(genre){return '<div class="gplayer" id="demos"><div class="panel"><div class="phd"><span class="ln" id="lnName"></span><span class="cnt" id="lnCnt"></span></div><div class="plist" id="plist"></div></div></div>';}
@@ -64,12 +56,13 @@ function navOnly(n){
 }
 var NJHV='https://nigeltheone1.github.io/njh-audio/';var VIDS={
 commercial:[
-{k:'vm',src:NJHV+'video-granger-route.mp4',b:'Granger Waste Services',t:'The Route :30'},
-{k:'vi',id:'1193409911',b:'SAIF',t:'Made for Oregon :30, broadcast TV'},
 {k:'vm',src:NJHV+'video-solo-solvers.mp4',poster:NJHV+'poster-solo-solvers.jpg',b:'Relatable',t:'Solo Solvers :30'},
+{k:'vm',src:NJHV+'video-granger-route.mp4',b:'Granger Waste Services',t:'The Route :30'},
+{k:'vi',id:'1199923869',b:'SAIF',t:'Made for Oregon :15, broadcast TV'},
 {k:'ym',id:'22F0v5tnMbU',b:'Kashi',t:'Kashi Loves Quitters',tall:1},
 {k:'vm',src:NJHV+'video-amex-korea-dreams.mp4',b:'American Express',t:'High Yield Savings: Korea Dreams :15',tall:1},
-{k:'vm',src:NJHV+'video-amex-growth.mp4',b:'American Express',t:'High Yield Savings: Growth :10',tall:1}],
+{k:'ym',id:'D4Xvo4u6SQY',b:'Adobe Acrobat',t:'Rosco: Water Cooler Confidential',tall:1},
+{k:'ym',id:'iYG4xgLr5mk',b:'Adobe Acrobat',t:'Rosco: My Very First Bunker',tall:1}],
 narration:[
 {k:'yt',id:'JaPl-KvAeoo',b:'Stepping Stone of San Diego',t:'50th Anniversary: Before and After'}]};
 function vidsSection(genre){var L=VIDS[genre];if(!L||!L.length)return'';function card(v){var fr;if(v.k==='vm')fr='<video controls preload="metadata" playsinline'+(v.poster?' poster="'+v.poster+'"':'')+' src="'+v.src+'"></video>';else if(v.k==='vi')fr='<iframe src="https://player.vimeo.com/video/'+v.id+'" title="'+esc(v.b+' '+v.t)+'" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>';else fr='<iframe src="https://www.youtube-nocookie.com/embed/'+v.id+'" title="'+esc(v.b+' '+v.t)+'" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>';return'<div class="vc"><div class="fr'+(v.tall?' tall':'')+'">'+fr+'</div><div class="cap"><b>'+esc(v.b)+'</b>'+esc(v.t)+'</div></div>';}
